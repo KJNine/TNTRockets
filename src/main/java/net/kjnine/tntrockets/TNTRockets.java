@@ -80,6 +80,10 @@ public class TNTRockets extends JavaPlugin implements Listener {
 	
 	@Override
 	public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
+		if(!sender.hasPermission("tntrockets.command")) {
+			sender.sendMessage(ChatColor.RED + "No Permission.");
+			return true;
+		}
 		if(command.getName().equals("tntrockets")) {
 			if(args.length > 0 && args[0].equalsIgnoreCase("reload")) {
 				try {
