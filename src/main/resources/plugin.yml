@@ -1,0 +1,10 @@
+name: TNTRockets
+version: 1.0.0
+api-version: 1.16
+main: net.kjnine.tntrockets.TNTRockets
+author: KJNine
+website: https://kjnine.net/plugin/tntrockets
+commands:
+    tntrockets:
+        permission: tntrockets.command
+        description: Fireworks explode like TNT

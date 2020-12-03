@@ -1,0 +1,54 @@
+# TNTRockets by KJNine
+# Firework Rockets will explode like TNT, rather than vanilla functionality of dealing entity damage only.
+
+# Config options for Small Ball fireworks.
+small:
+    explosion-radius: 2.0
+    # Set to false to make the explosion not destroy blocks, or 'crossbow-only' to only break blocks from crossbow fireworks.
+    # Uncomment this line and comment the other one to prevent hand-launched fireworks from breaking blocks.
+    #explode-blocks: crossbow-only
+    explode-blocks: true
+    # Set to true to have the explosion lay fire across its area (similar to beds in the nether)
+    # Uncomment this line and comment the other one to only produce fire from crossbow fireworks.
+    #explode-fire: crossbow-only
+    explode-fire: false
+    # Set to true to leave hand-launched fireworks with vanilla functionality.
+    crossbow-only: false
+
+# Config options for Large Ball fireworks. (Does not stack with multiple balls, just looks for atleast 1 large ball.)
+large:
+    explosion-radius: 3.0
+    # Set to false to make the explosion not destroy blocks, or 'crossbow-only' to only break blocks from crossbow fireworks.
+    # Uncomment this line and comment the other one to prevent hand-launched fireworks from breaking blocks.
+    #explode-blocks: crossbow-only
+    explode-blocks: true
+    # Set to true to have the explosion lay fire across its area (similar to beds in the nether)
+    # Uncomment this line and comment the other one to prevent hand-launched fireworks from producing fire.
+    #explode-fire: crossbow-only
+    explode-fire: true
+    # Set to true to leave hand-launched fireworks with vanilla functionality.
+    crossbow-only: false
+    
+# ------------------
+# Velocity modifiers
+# ------------------
+# Default settings disable any velocity modifications.
+# Very high velocities might cause issues with vanilla minecraft's limitations.
+
+# 1.0 means keep vanilla velocity,
+# anything higher will speed up firework rockets,
+# anything lower will slow down firework rockets.
+velocity-modifier: 1.0
+
+# Add to the base velocity modifier if the firework has a large ball. (Does not stack with multiple balls, to prevent insane velocities.)
+velocity-largeball-add-modifier: 0.0
+# Since trail is crafted with diamonds, this is an option to have trailed fireworks fire faster.
+velocity-trail-add-modifier: 0.0
+
+# Only modify the velocity when the firework is launched via crossbow.
+velocity-crossbow-only: false
+# Set to true to only modify the velocity (set above) when the crossbow has piercing. 
+# (If this is true but velocity-crossbow-only is false, then hand-launched fireworks will ALSO be modified, but crossbows without piercing won't.)
+velocity-piercing-only: false
+# Add this to the velocity-modifier PER LEVEL of Piercing. (Regardless of the above setting, the above setting only prevents modification of non-piercing)
+velocity-piercing-add-modifier: 0.0
